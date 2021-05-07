@@ -1,16 +1,89 @@
+* {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
 .grid {
     display: flex;
     flex-wrap: wrap;
-    width: 400px;
-    height: 400px;
-    background-color: blue;
+    width: 450px;
+    height: 450px;
+    background-color: #ffdde1;
+    margin: 0 auto;
+    padding: 30px 10px 30px 30px;
 }
 
 .grid div {
     width: 100px;
     height: 100px;
-    background-color: yellow;
-    font-size: 60px;
+    margin: 0 10px 10px 0;
+    background: #ee9ca7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* fallback for old browsers */
+    /* background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7); */
+    /* Chrome 10-25, Safari 5.1-6 */
+    /* background: linear-gradient(to right, #ffdde1, #ee9ca7); */
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-size: 50px;
     text-align: center;
     font-weight: bold;
+    border-radius: 10px;
+}
+
+.score-title,
+.container,
+.score,
+.result {
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.zero {
+    background: #ee9ca7;
+}
+
+.two {
+    background: #ee9ba6;
+}
+
+.four {
+    background: #ef9faa;
+}
+
+.eight {
+    background: #f0a0ab;
+}
+
+.sixteen {
+    background: #f1a3ad;
+}
+
+.thirty_two {
+    background: #efa6af;
+}
+
+.sixty_four {
+    background: #f2acb5;
+}
+
+.one_twenty_eight {
+    background: #ee9ca7;
+}
+
+.two_fifty_six {
+    background: #f3b3ba;
+}
+
+.five_one_two {
+    background: #f7bcc3;
+}
+
+.one_zero_two_four {
+    background: #f9c6cc;
+}
+
+.two_zero_forty_eight {
+    background: #fbced3;
 }
