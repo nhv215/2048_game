@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         generate();
         generate();
+        addColorClass();
     }
 
     createBoard();
@@ -80,6 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function moveDown() {
         for (let i = 0; i < width; i++) {
+
             let totalOne = squares[i].innerHTML;
             let totalTwo = squares[i + width].innerHTML;
             let totalThree = squares[i + (2 * width)].innerHTML;
@@ -148,30 +150,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function addColorClass() {
         for (let i = 0; i < width * width; i++) {
-            // square[i].classList.remove(...square[i].classList);
-            if (square[i].innerHTML == 0) {
+            let innerHTML = squares[i].innerHTML;
+            if (innerHTML == 0) {
                 squares[i].classList.add("zero");
-            } else if (square[i].innerHTML == 2) {
+            } else if (innerHTML == 2) {
                 squares[i].classList.add("two");
-            } else if (square[i].innerHTML == 4) {
+            } else if (innerHTML == 4) {
                 squares[i].classList.add("four");
-            } else if (square[i].innerHTML == 8) {
+            } else if (innerHTML == 8) {
                 squares[i].classList.add("eight");
-            } else if (square[i].innerHTML == 16) {
+            } else if (innerHTML == 16) {
                 squares[i].classList.add("sixteen");
-            } else if (square[i].innerHTML == 32) {
+            } else if (innerHTML == 32) {
                 squares[i].classList.add("thirty_two");
-            } else if (square[i].innerHTML == 64) {
+            } else if (innerHTML == 64) {
                 squares[i].classList.add("sixty_four");
-            } else if (square[i].innerHTML == 128) {
+            } else if (innerHTML == 128) {
                 squares[i].classList.add("one_two_eight");
-            } else if (square[i].innerHTML == 256) {
+            } else if (innerHTML == 256) {
                 squares[i].classList.add("two_fifty_six");
-            } else if (square[i].innerHTML == 512) {
+            } else if (innerHTML == 512) {
                 squares[i].classList.add("five_one_two");
-            } else if (square[i].innerHTML == 1024) {
+            } else if (innerHTML == 1024) {
                 squares[i].classList.add("one_zero_two_four");
-            } else if (square[i].innerHTML == 2048) {
+            } else if (innerHTML == 2048) {
                 squares[i].classList.add("two_zero_four_eight");
             }
         }
@@ -215,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (e.keyCode === 40) {
             keyDown();
         }
-        // addColorClass()
+        addColorClass()
     }
 
     document.addEventListener('keyup', control);
